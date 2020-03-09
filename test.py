@@ -2,7 +2,7 @@ from git import Repo
 import os
 PATH_OF_GIT_REPO = os.getcwd()  # make sure .git folder is properly configured
 COMMIT_MESSAGE = 'comment from python script 1'
-
+from get_lastest_commit_id import get_lastest_commit
 
 def git_push(files_to_add, commit_message):
     try:
@@ -15,3 +15,6 @@ def git_push(files_to_add, commit_message):
         print('Some error occured while pushing the code')    
 
 git_push('*', 'adding hello, bye')
+
+#print(get_lastest_commit())
+
